@@ -174,7 +174,7 @@ const ReserveTime: React.FC = () => {
             date: getDate(date5),
             day: getDay(date5),
             ms: getTime(date5),
-            seletedDate: "date",
+            seletedDate: "date5",
             format:
               getYear(date5) +
               " " +
