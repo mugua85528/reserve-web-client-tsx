@@ -1,0 +1,1965 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Lusitana&family=Noto+Sans+TC&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  scroll-behavior: smooth;
+  transition: 0.3s ease-in-out;
+  font-family: "Baloo 2", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+* button {
+  cursor: pointer;
+}
+
+#Nav {
+  background: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/slg0rrdkcjtfb8cb3tif") no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+}
+#Nav .bar {
+  top: 1rem;
+  right: 0rem;
+  position: absolute;
+}
+#Nav .bar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  margin-right: 4rem;
+}
+#Nav .bar ul li {
+  padding: 1.3rem 0.3rem;
+  list-style-type: none;
+}
+#Nav .bar ul li a {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+}
+#Nav .bar ul li a:hover {
+  color: rgb(218, 66, 187);
+  animation: navBar 2s ease-out;
+  border-bottom: 5px double rgb(218, 66, 187);
+}
+#Nav .bar ul li .currentPage {
+  color: rgb(245, 109, 147);
+  border-bottom: 5px double rgb(245, 109, 147);
+}
+#Nav button {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  background: linear-gradient(-270deg, rgb(250, 74, 124), rgb(218, 66, 187));
+  border-style: none;
+  border-radius: 2rem;
+  padding: 1rem 4rem;
+}
+#Nav button:hover {
+  font-size: 1.5rem;
+}
+
+#Search {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Search .Search-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+#Search .Search-result .message {
+  width: 100%;
+  max-width: 40%;
+  background-color: rgb(245, 108, 108);
+  color: white;
+  text-align: center;
+  padding: 0.2rem 0rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+#Search .Search-result .none {
+  display: none;
+}
+#Search .Search-result .input-button {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5rem;
+}
+#Search .Search-result .input-button input {
+  padding: 0rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid rgb(149, 149, 149);
+}
+#Search .Search-result .input-button button {
+  margin-left: 2rem;
+  width: 100%;
+  max-width: 5rem;
+  background-color: rgb(249, 155, 182);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+}
+#Search .Search-result .result {
+  width: 90%;
+  max-width: 70rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 7px 10px 5px rgb(230, 225, 225);
+}
+#Search .Search-result .result .title {
+  margin-bottom: 1.5rem;
+}
+#Search .Search-result .result .card {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#Search .Search-result .result .card p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  margin-right: 1rem;
+}
+#Search .Search-result .result .card .time {
+  width: 45%;
+  height: 3rem;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3px 5px 2px rgb(230, 225, 225);
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  background-color: white;
+  color: rgb(249, 155, 181);
+}
+#Search .Search-result .result .card .service {
+  width: 25%;
+  height: 3rem;
+  margin-left: 2rem;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3px 5px 2px rgb(230, 225, 225);
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  background-color: rgba(249, 155, 181, 0.777);
+  color: white;
+}
+
+#Home {
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Home .about {
+  width: 90%;
+}
+#Home .about .aboutUs {
+  margin: 2rem;
+  text-align: center;
+}
+#Home .about .aboutUs .p-hr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+#Home .about .aboutUs .p-hr p {
+  font-size: 3rem;
+}
+#Home .about .aboutUs .p-hr hr {
+  margin: 1rem;
+  width: 9rem;
+}
+#Home .about .aboutUs h1 {
+  margin: 4rem 0rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#Home .about .aboutUs .service-p {
+  font-size: 1.7rem;
+}
+#Home .about .aboutUs .service {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#Home .about .aboutUs .service .service1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+#Home .about .aboutUs .service .service1 .circle {
+  width: 8rem;
+  height: 8rem;
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/g0wyialeqf2kxhmpfsag");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+#Home .about .aboutUs .service .service1 .h2-hr {
+  position: relative;
+  top: 1rem;
+  margin-left: 2rem;
+}
+#Home .about .aboutUs .service .service1 .h2-hr h2 {
+  font-weight: bold;
+}
+#Home .about .aboutUs .service .service1 .h2-hr hr {
+  width: 100%;
+}
+#Home .about .aboutUs .service .service2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: all 2s ease-out forwards;
+  margin: 2rem;
+}
+#Home .about .aboutUs .service .service2 .circle {
+  width: 8rem;
+  height: 8rem;
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/zqlslt71meqfgrqsvras");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+#Home .about .aboutUs .service .service2 .h2-hr {
+  position: relative;
+  top: 1rem;
+  margin-left: 2rem;
+}
+#Home .about .aboutUs .service .service2 .h2-hr h2 {
+  font-weight: bold;
+}
+#Home .about .aboutUs .service .service2 .h2-hr hr {
+  width: 100%;
+}
+#Home .about .opening-contact {
+  margin: 5rem 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+#Home .about .opening-contact .card {
+  padding: 2rem;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 30rem;
+  min-width: 425px;
+  box-shadow: 0px 7px 10px 5px rgb(230, 225, 225);
+}
+#Home .about .opening-contact .opening p {
+  font-size: 2rem;
+}
+#Home .about .opening-contact .opening table {
+  margin: 1rem 0rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Home .about .opening-contact .opening table tbody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#Home .about .opening-contact .opening table tbody tr {
+  display: flex;
+  justify-content: space-between;
+}
+#Home .about .opening-contact .opening table tbody tr th {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#Home .about .opening-contact .contact p {
+  font-size: 2rem;
+}
+#Home .about .opening-contact .contact table {
+  margin: 1rem 0rem;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Home .about .opening-contact .contact table tbody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#Home .about .opening-contact .contact table tbody tr {
+  display: flex;
+  justify-content: space-between;
+}
+#Home .about .opening-contact .contact table tbody tr th {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#Home .reviews {
+  height: auto;
+  width: 100%;
+}
+#Home .reviews .p-hr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+#Home .reviews .p-hr p {
+  font-size: 3rem;
+}
+#Home .reviews .p-hr hr {
+  margin: 1rem;
+  width: 9rem;
+}
+#Home .reviews .reviews-div {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#Home .reviews .reviews-div .review {
+  height: 20rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 7px 10px 5px rgb(230, 225, 225);
+  margin: 1rem;
+}
+#Home .reviews .reviews-div .review .per1 {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/wv0tbhe4dpmm23aryoop");
+  background-size: cover;
+  background-position: 55% 5%;
+  margin-top: 2rem;
+}
+#Home .reviews .reviews-div .review .per2 {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/unhaqttdfluxqkbllv89");
+  background-size: cover;
+  background-position: 55% 5%;
+  margin-top: 2rem;
+}
+#Home .reviews .reviews-div .review .per3 {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/ypnvymeqsg8p7aetv2jr");
+  background-size: cover;
+  background-position: 40% 0%;
+  margin-top: 2rem;
+}
+#Home .reviews .reviews-div .review .name {
+  font-size: 2.5rem;
+  margin: 2rem 0rem 1rem 0rem;
+}
+#Home .reviews .reviews-div .review .say {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+#Home .gallery {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Home .gallery .p-hr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0rem 3rem 0rem;
+}
+#Home .gallery .p-hr p {
+  font-size: 3rem;
+}
+#Home .gallery .p-hr hr {
+  margin: 1rem;
+  width: 9rem;
+}
+#Home .gallery .big-img {
+  position: relative;
+  transition: none;
+}
+#Home .gallery .big-img .pre {
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+}
+#Home .gallery .big-img .pre p {
+  transition: none;
+  font-size: 0;
+}
+#Home .gallery .big-img .pre:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+#Home .gallery .big-img .pre:hover .p-pre {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+#Home .gallery .big-img .next {
+  color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+#Home .gallery .big-img .next p {
+  transition: none;
+  font-size: 0;
+}
+#Home .gallery .big-img .next:hover {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+#Home .gallery .big-img .next:hover .p-next {
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+#Home .gallery .big-img1 {
+  width: 90%;
+  height: 100vh;
+  background-image: url("../../public/picture/spa1.jpg");
+  background-size: cover;
+}
+#Home .gallery .big-img2 {
+  width: 90%;
+  height: 100vh;
+  background-image: url("../../public/picture/spa2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#Home .gallery .big-img3 {
+  width: 90%;
+  height: 100vh;
+  background-image: url("../../public/picture/spa3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#Home .gallery .little-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+#Home .gallery .little-img .current {
+  border: 3px solid rgb(255, 177, 226);
+  transition: none;
+}
+#Home .gallery .little-img .little1 {
+  width: 15%;
+  height: 15vh;
+  background-image: url("../../public/picture/spa1.jpg");
+  background-size: cover;
+  margin: 0rem 0.5rem;
+}
+#Home .gallery .little-img .little2 {
+  width: 15%;
+  height: 15vh;
+  background-image: url("../../public/picture/spa2.jpg");
+  background-size: cover;
+  margin: 0rem 0.5rem;
+}
+#Home .gallery .little-img .little3 {
+  width: 15%;
+  height: 15vh;
+  background-image: url("../../public/picture/spa3.jpg");
+  background-size: cover;
+  margin: 0rem 0.5rem;
+}
+#Home .location {
+  height: auto;
+  margin: 5rem 0 3rem 0;
+}
+#Home .location .p-hr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 0rem;
+}
+#Home .location .p-hr p {
+  font-size: 3rem;
+}
+#Home .location .p-hr hr {
+  margin: 1rem;
+  width: 9rem;
+}
+#Home .location .google-map .map {
+  width: 90vw;
+  height: 60vh;
+}
+#Home .top-button {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(246, 126, 160, 0.8);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+#Service {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+#Service .step {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Service .step .step1 {
+  margin: 0rem 4%;
+}
+#Service .step .step2 {
+  margin: 3%;
+}
+#Service .step .step3 {
+  margin: 3%;
+}
+#Service .step .arow1 {
+  margin: 4%;
+  font-size: 3rem;
+  color: rgb(249, 155, 182);
+}
+#Service .step .arow2 {
+  margin: 4%;
+  font-size: 3rem;
+  color: rgba(155, 150, 151, 0.607);
+}
+#Service .step .circle1 {
+  box-shadow: 0px 0px 5px 0px rgb(218, 66, 187);
+  color: white;
+  background-color: rgba(246, 126, 160, 0.8);
+}
+#Service .step .circle2 {
+  color: white;
+  background-color: rgba(155, 150, 151, 0.607);
+}
+#Service .step .circle3 {
+  color: white;
+  background-color: rgba(155, 150, 151, 0.607);
+}
+#Service .step .circle {
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#Service .step .circle .num {
+  font-size: 3rem;
+}
+#Service .service {
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#Service .service .card {
+  padding: 1rem;
+  margin: 0rem 1rem;
+  width: 45%;
+  height: 30rem;
+  box-shadow: 0px 7px 10px 5px rgb(230, 225, 225);
+  display: flex;
+}
+#Service .service .card .img1 {
+  width: 60%;
+  height: 100%;
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/g0wyialeqf2kxhmpfsag");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+#Service .service .card .img2 {
+  width: 60%;
+  height: 100%;
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/zqlslt71meqfgrqsvras");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+#Service .service .card .p-hr-button {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Service .service .card .p-hr-button .btn-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Service .service .card .p-hr-button .btn-div button {
+  width: 70%;
+  margin: 1rem 0rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.5rem;
+  border: 3px solid rgb(245, 109, 147);
+  border-radius: 20px;
+  background-color: white;
+}
+#Service .service .card .p-hr-button .btn-div button:hover {
+  background-color: rgb(245, 109, 147);
+  color: white;
+}
+#Service .service .card .p-hr-button p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+#Service .service .card .p-hr-button hr {
+  position: relative;
+  margin: 0.5rem 0rem;
+  width: 80%;
+}
+
+#ReserveMain {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+#ReserveMain .step {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ReserveMain .step .step1 {
+  margin: 0rem 4%;
+}
+#ReserveMain .step .step2 {
+  margin: 3%;
+}
+#ReserveMain .step .step3 {
+  margin: 3%;
+}
+#ReserveMain .step .arow1 {
+  margin: 4%;
+  font-size: 3rem;
+  color: rgb(218, 66, 187);
+}
+#ReserveMain .step .arow2 {
+  margin: 4%;
+  font-size: 3rem;
+  color: rgb(249, 155, 182);
+}
+#ReserveMain .step .circle1 {
+  box-shadow: 0px 0px 5px 0px rgb(218, 66, 187);
+  color: white;
+  background-color: rgb(218, 66, 187);
+}
+#ReserveMain .step .circle1 .check {
+  text-align: center;
+  font-size: 1.5rem;
+}
+#ReserveMain .step .circle2 {
+  color: white;
+  background-color: rgba(246, 126, 160, 0.8);
+}
+#ReserveMain .step .circle3 {
+  color: white;
+  background-color: rgba(155, 150, 151, 0.607);
+}
+#ReserveMain .step .circle {
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#ReserveMain .step .circle .num {
+  font-size: 3rem;
+}
+#ReserveMain .return {
+  display: flex;
+  justify-content: center;
+}
+#ReserveMain .return .return-div {
+  max-width: 66rem;
+  width: 90%;
+  height: 3rem;
+  position: relative;
+  margin: 0rem 0rem 3rem 0rem;
+}
+#ReserveMain .return .return-div button {
+  position: absolute;
+  left: 0;
+  border: 2px solid rgb(218, 66, 187);
+  border-radius: 20px;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+#ReserveMain .return .return-div button:hover {
+  background-color: rgb(218, 66, 187);
+  color: white;
+}
+#ReserveMain .time-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#ReserveMain .time-area .year-month {
+  padding: 1rem;
+  margin-bottom: 3rem;
+  width: 95%;
+  max-width: 70rem;
+  height: 5rem;
+  box-shadow: 0px 3px 10px 2px rgb(230, 225, 225);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#ReserveMain .time-area .year-month .year-month-div {
+  min-width: 20rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#ReserveMain .time-area .year-month .none {
+  transition: none;
+  display: none;
+}
+#ReserveMain .time-area .year-month .pre {
+  padding: 0.5rem 1rem;
+  border: none;
+  position: absolute;
+  left: 2%;
+  background-color: white;
+  font-size: 1.5rem;
+  color: rgb(245, 109, 147);
+  border-radius: 20px;
+}
+#ReserveMain .time-area .year-month .pre:hover {
+  background-color: rgb(245, 109, 147);
+  color: white;
+}
+#ReserveMain .time-area .year-month .next {
+  position: absolute;
+  right: 2%;
+  background-color: white;
+  font-size: 1.5rem;
+  color: rgb(245, 109, 147);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+#ReserveMain .time-area .year-month .next:hover {
+  background-color: rgb(245, 109, 147);
+  color: white;
+}
+#ReserveMain .time-area .year-month .p-none {
+  display: flex;
+}
+#ReserveMain .time-area .year-month p {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+}
+#ReserveMain .time-area .year-month .none {
+  transition: none;
+  display: none;
+}
+#ReserveMain .time-area .p {
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+}
+#ReserveMain .time-area hr {
+  width: 7rem;
+  margin-bottom: 2rem;
+}
+#ReserveMain .time-area .date-div {
+  width: 45rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+#ReserveMain .time-area .date-div button {
+  width: 5rem;
+  height: 4.5rem;
+  background-color: white;
+  border: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  border-radius: 50%;
+}
+#ReserveMain .time-area .date-div button:hover {
+  background-color: rgb(249, 155, 182);
+  color: white;
+}
+#ReserveMain .time-area .date-div .seleted {
+  background-color: rgb(218, 66, 187);
+  color: white;
+}
+#ReserveMain .time-area .date-div .seleted:hover {
+  background-color: rgb(218, 66, 187);
+  color: white;
+}
+#ReserveMain .time-area .time-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 4rem;
+}
+#ReserveMain .time-area .time-div button {
+  background-color: white;
+  margin: 0rem 0.3rem;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 2px solid rgb(249, 155, 182);
+}
+#ReserveMain .time-area .time-div button:hover {
+  background-color: rgb(249, 155, 182);
+  color: white;
+}
+#ReserveMain .time-area .time-div .none {
+  display: none;
+}
+
+#Data {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+#Data .step {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Data .step .step1 {
+  margin: 0rem 4%;
+}
+#Data .step .step2 {
+  margin: 3%;
+}
+#Data .step .step3 {
+  margin: 3%;
+}
+#Data .step .arow1 {
+  margin: 4%;
+  font-size: 3rem;
+  color: rgb(218, 66, 187);
+}
+#Data .step .arow2 {
+  margin: 4%;
+  font-size: 3rem;
+  color: rgb(249, 155, 182);
+}
+#Data .step .circle1 {
+  box-shadow: 0px 0px 5px 0px rgb(218, 66, 187);
+  color: white;
+  background-color: rgb(218, 66, 187);
+}
+#Data .step .circle1 .check {
+  text-align: center;
+  font-size: 1.5rem;
+}
+#Data .step .circle2 {
+  color: white;
+  box-shadow: 0px 0px 5px 0px rgb(218, 66, 187);
+  background-color: rgb(218, 66, 187);
+}
+#Data .step .circle2 .check {
+  text-align: center;
+  font-size: 1.5rem;
+}
+#Data .step .circle3 {
+  color: white;
+  background-color: rgba(246, 126, 160, 0.8);
+}
+#Data .step .circle {
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#Data .step .circle .num {
+  font-size: 3rem;
+}
+#Data .return {
+  display: flex;
+  justify-content: center;
+}
+#Data .return .return-div {
+  width: 60%;
+  height: 3rem;
+  position: relative;
+  margin: 0rem 0rem 3rem 0rem;
+}
+#Data .return .return-div button {
+  position: absolute;
+  left: 0;
+  border: 2px solid rgb(218, 66, 187);
+  border-radius: 20px;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+#Data .return .return-div button:hover {
+  background-color: rgb(218, 66, 187);
+  color: white;
+}
+#Data .form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+#Data .form .form-div {
+  padding: 1rem;
+  margin: 0rem 2rem;
+  width: 70rem;
+  height: 38rem;
+  box-shadow: 0px 7px 10px 5px rgb(230, 225, 225);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Data .form .form-div .form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+#Data .form .form-div .data {
+  width: 100%;
+  height: 85%;
+  display: flex;
+}
+#Data .form .form-div .data .reverse {
+  padding: 1rem;
+  margin: 0rem 1rem;
+  width: 50%;
+  height: 100%;
+  box-shadow: 0px 7px 10px 5px rgb(230, 225, 225);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Data .form .form-div .data .reverse .reverse-p {
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
+}
+#Data .form .form-div .data .reverse .reverse-y {
+  text-align: center;
+  font-size: 3rem;
+}
+#Data .form .form-div .data .reverse .reverse-t {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+#Data .form .form-div .data .reverse .service {
+  margin-top: 5rem;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+#Data .form .form-div .data .reverse .service p {
+  font-size: 1.5rem;
+}
+#Data .form .form-div .data .reverse .price {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+#Data .form .form-div .data .reverse .price p {
+  font-size: 1.5rem;
+}
+#Data .form .form-div .data .profile {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1rem;
+}
+#Data .form .form-div .data .profile .profile-data {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+#Data .form .form-div .data .profile .profile-data .name-gender {
+  display: flex;
+  margin-bottom: 0.2rem;
+}
+#Data .form .form-div .data .profile .profile-data .name-gender .user-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.45rem;
+  background-image: url("../../public/picture/icons8-user-30.png");
+}
+#Data .form .form-div .data .profile .profile-data .name-gender .name {
+  padding: 0.3rem;
+  width: 56%;
+}
+#Data .form .form-div .data .profile .profile-data .name-gender .gender {
+  margin-left: 0.3rem;
+  padding: 0.3rem;
+  width: 35%;
+}
+#Data .form .form-div .data .profile .profile-data .phone-div {
+  display: flex;
+  width: 100%;
+}
+#Data .form .form-div .data .profile .profile-data .phone-div .phone-icon {
+  margin-right: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../../public/picture/icons8-phone-30.png");
+}
+#Data .form .form-div .data .profile .profile-data .phone-div .phone {
+  width: 100%;
+  margin: 0.2rem 0rem;
+  padding: 0.3rem;
+}
+#Data .form .form-div .data .profile .profile-data .email-div {
+  width: 100%;
+  display: flex;
+}
+#Data .form .form-div .data .profile .profile-data .email-div .email-icon {
+  margin-right: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../../public/picture/icons8-email-30.png");
+  background-repeat: no-repeat;
+}
+#Data .form .form-div .data .profile .profile-data .email-div .email {
+  width: 100%;
+  margin-top: 0.2rem;
+  padding: 0.3rem;
+}
+#Data .form .form-div .data .profile .textarea-p {
+  width: 100%;
+}
+#Data .form .form-div .data .profile .textarea-p .textarea {
+  height: 8rem;
+  width: 100%;
+  resize: none;
+  padding: 0.5rem;
+}
+#Data .form .form-div .data .profile .check-button {
+  display: flex;
+  flex-direction: column;
+}
+#Data .form .form-div .data .profile .check-button .error {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0rem 0 0;
+}
+#Data .form .form-div .data .profile .check-button .error .message {
+  width: 100%;
+  background-color: rgb(245, 108, 108);
+  color: white;
+  text-align: center;
+  padding: 0.2rem 0rem;
+  border-radius: 10px;
+}
+#Data .form .form-div .data .profile .check-button .button-div {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+#Data .form .form-div .data .profile .check-button .button-div .button {
+  position: relative;
+  width: 100%;
+  max-width: 43%;
+  background-color: rgb(249, 155, 182);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem 2rem;
+}
+#Data .form .form-div .data .profile .check-button .button-div .button:hover {
+  animation: button 2s ease-in-out infinite;
+}
+
+#Footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+@keyframes button {
+  0% {
+    background-color: rgb(249, 155, 182);
+  }
+  50% {
+    background-color: rgb(218, 66, 187);
+  }
+  100% {
+    background-color: rgb(249, 155, 182);
+  }
+}
+@media screen and (max-width: 1024px) {
+  #Search .Search-result .result .card p {
+    font-size: 1rem;
+  }
+  #Search .Search-result .result .card .time {
+    width: 55%;
+  }
+  #Search .Search-result .result .card .service {
+    width: 35%;
+  }
+  #Service .step .step1 {
+    margin: 3%;
+  }
+  #Service .step .step2 {
+    margin: 2%;
+  }
+  #Service .step .step3 {
+    margin: 2%;
+  }
+  #Service .step .arow1 {
+    margin: 0rem;
+  }
+  #Service .step .arow2 {
+    margin: 0rem;
+  }
+  #Service .service .card .p-hr-button .btn-div button {
+    margin: 0.5rem 0rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.5rem;
+  }
+  #Service .service .card .p-hr-button p {
+    font-size: 1.7rem;
+  }
+  #ReserveMain .step .step1 {
+    margin: 3%;
+  }
+  #ReserveMain .step .step2 {
+    margin: 2%;
+  }
+  #ReserveMain .step .step3 {
+    margin: 2%;
+  }
+  #ReserveMain .step .arow1 {
+    margin: 0rem;
+  }
+  #ReserveMain .step .arow2 {
+    margin: 0rem;
+  }
+  #ReserveMain .time-area .date-div {
+    width: 45rem;
+  }
+  #ReserveMain .time-area .date-div button {
+    letter-spacing: 0.1rem;
+  }
+  #ReserveMain .time-area .time-div {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    margin: 0rem 1rem 4rem 1rem;
+  }
+  #ReserveMain .time-area .time-div button {
+    margin: 0rem 0.3rem 0.5rem 0rem;
+  }
+  #Data {
+    width: 100%;
+    height: auto;
+  }
+  #Data .step {
+    width: 100%;
+    height: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #Data .step .step1 {
+    margin: 0rem 1%;
+  }
+  #Data .step .step2 {
+    margin: 0.5%;
+  }
+  #Data .step .step3 {
+    margin: 0.5%;
+  }
+  #Data .step .arow1 {
+    margin: 1%;
+    font-size: 3rem;
+    color: rgb(218, 66, 187);
+  }
+  #Data .step .arow2 {
+    margin: 1%;
+    font-size: 3rem;
+    color: rgb(249, 155, 182);
+  }
+  #Data .step .circle1 {
+    box-shadow: 0px 0px 5px 0px rgb(218, 66, 187);
+    color: white;
+    background-color: rgb(218, 66, 187);
+  }
+  #Data .step .circle1 .check {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  #Data .step .circle2 {
+    color: white;
+    box-shadow: 0px 0px 5px 0px rgb(218, 66, 187);
+    background-color: rgb(218, 66, 187);
+  }
+  #Data .step .circle2 .check {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  #Data .step .circle3 {
+    color: white;
+    background-color: rgba(246, 126, 160, 0.8);
+  }
+  #Data .step .circle {
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  #Data .step .circle .num {
+    font-size: 3rem;
+  }
+  #Data .return {
+    display: flex;
+    justify-content: center;
+  }
+  #Data .return .return-div {
+    width: 90%;
+    height: 3rem;
+    position: relative;
+    margin: 0rem 0rem 3rem 0rem;
+  }
+  #Data .return .return-div button {
+    position: absolute;
+    left: 0;
+    border: 2px solid rgb(218, 66, 187);
+    border-radius: 20px;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+  #Data .return .return-div button:hover {
+    background-color: rgb(218, 66, 187);
+    color: white;
+  }
+  #Data .form .form-div {
+    width: 80%;
+    height: 70rem;
+  }
+  #Data .form .form-div .data {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #Data .form .form-div .data .reverse {
+    width: 30rem;
+    height: 30rem;
+  }
+  #Data .form .form-div .data .profile {
+    width: 80%;
+    justify-content: start;
+  }
+  #Data .form .form-div .data .profile .profile-data {
+    margin: 2rem 0rem;
+  }
+  #Data .form .form-div .data .profile .profile-data .name-gender .gender {
+    width: 37%;
+  }
+  #Data .form .form-div .data .profile .check-button {
+    margin: 1rem 0rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #Nav button {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
+  #Home .gallery .big-img .pre:hover .p-pre {
+    font-size: 2rem;
+    top: 45%;
+  }
+  #Home .gallery .big-img .next:hover .p-next {
+    font-size: 2rem;
+    top: 45%;
+  }
+  #Home .gallery .big-img1 {
+    height: 50vh;
+  }
+  #Home .gallery .big-img2 {
+    height: 50vh;
+  }
+  #Home .gallery .big-img3 {
+    height: 50vh;
+  }
+  #Home .gallery .little-img .little1 {
+    width: 20%;
+    height: 10vh;
+    background-position: center;
+  }
+  #Home .gallery .little-img .little2 {
+    width: 20%;
+    height: 10vh;
+    background-position: center;
+  }
+  #Home .gallery .little-img .little3 {
+    width: 20%;
+    height: 10vh;
+    background-position: center;
+  }
+  #Search .Search-result .result .card {
+    height: auto;
+    flex-direction: column;
+    margin: 1.5rem 0;
+  }
+  #Search .Search-result .result .card p {
+    font-size: 1rem;
+  }
+  #Search .Search-result .result .card .time {
+    height: 2rem;
+    width: 100%;
+    padding-left: 1.5rem;
+  }
+  #Search .Search-result .result .card .service {
+    height: 2rem;
+    width: 100%;
+  }
+  #Service .step {
+    height: 13rem;
+  }
+  #Service .step .arow1 {
+    margin: 0 4%;
+    font-size: 2rem;
+  }
+  #Service .step .arow2 {
+    margin: 0 3%;
+    font-size: 2rem;
+  }
+  #Service .step .circle1 .check {
+    font-size: 1rem;
+  }
+  #Service .step .circle2 .check {
+    font-size: 1rem;
+  }
+  #Service .step .circle {
+    width: 8rem;
+    height: 8rem;
+  }
+  #Service .step .circle .num {
+    font-size: 2rem;
+  }
+  #Service .service {
+    flex-wrap: wrap;
+    margin-bottom: 30rem;
+  }
+  #Service .service .card {
+    width: 90%;
+    margin: 1rem 0rem;
+  }
+  #ReserveMain {
+    height: auto;
+    width: 100%;
+  }
+  #ReserveMain .step {
+    height: 13rem;
+  }
+  #ReserveMain .step .arow1 {
+    margin: 0 4%;
+    font-size: 2rem;
+  }
+  #ReserveMain .step .arow2 {
+    margin: 0 3%;
+    font-size: 2rem;
+  }
+  #ReserveMain .step .circle1 .check {
+    font-size: 1rem;
+  }
+  #ReserveMain .step .circle2 .check {
+    font-size: 1rem;
+  }
+  #ReserveMain .step .circle {
+    width: 8rem;
+    height: 8rem;
+  }
+  #ReserveMain .step .circle .num {
+    font-size: 2rem;
+  }
+  #ReserveMain .time-area .date-div {
+    width: 90%;
+  }
+  #ReserveMain .time-area .date-div button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+  #Data .step {
+    height: 13rem;
+  }
+  #Data .step .arow1 {
+    margin: 0 4%;
+    font-size: 2rem;
+  }
+  #Data .step .arow2 {
+    margin: 0 3%;
+    font-size: 2rem;
+  }
+  #Data .step .circle1 .check {
+    font-size: 1rem;
+  }
+  #Data .step .circle2 .check {
+    font-size: 1rem;
+  }
+  #Data .step .circle {
+    width: 8rem;
+    height: 8rem;
+  }
+  #Data .step .circle .num {
+    font-size: 2rem;
+  }
+  #Data .form .form-div {
+    width: 80%;
+    height: 70rem;
+  }
+  #Data .form .form-div .data {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #Data .form .form-div .data .reverse {
+    width: 30rem;
+    height: 30rem;
+  }
+  #Data .form .form-div .data .reverse .reverse-y {
+    font-size: 2rem;
+  }
+  #Data .form .form-div .data .reverse .reverse-t {
+    font-size: 2rem;
+  }
+  #Data .form .form-div .data .profile {
+    width: 80%;
+    justify-content: start;
+  }
+  #Data .form .form-div .data .profile .profile-data {
+    margin: 2rem 0rem;
+  }
+  #Data .form .form-div .data .profile .check-button {
+    margin: 1rem 0rem;
+  }
+}
+@media screen and (max-width: 564px) {
+  #Service .step {
+    height: 13rem;
+  }
+  #Service .step .arow1 {
+    margin: 0 1%;
+    font-size: 2rem;
+  }
+  #Service .step .arow2 {
+    margin: 0 1%;
+    font-size: 2rem;
+  }
+  #Service .step .circle1 .check {
+    font-size: 1rem;
+  }
+  #Service .step .circle2 .check {
+    font-size: 1rem;
+  }
+  #Service .step .circle {
+    width: 7rem;
+    height: 7rem;
+  }
+  #Service .step .circle .num {
+    font-size: 2rem;
+  }
+  #Service .service {
+    flex-wrap: wrap;
+    margin-bottom: 30rem;
+  }
+  #Service .service .card {
+    width: 90%;
+    margin: 1rem 0rem;
+  }
+  #ReserveMain .step {
+    height: 13rem;
+  }
+  #ReserveMain .step .step1 {
+    margin: 0%;
+  }
+  #ReserveMain .step .step2 {
+    margin: 0%;
+  }
+  #ReserveMain .step .step3 {
+    margin: 0%;
+  }
+  #ReserveMain .step .arow1 {
+    margin: 0 1%;
+    font-size: 2rem;
+  }
+  #ReserveMain .step .arow2 {
+    margin: 0 1%;
+    font-size: 2rem;
+  }
+  #ReserveMain .step .circle1 .check {
+    font-size: 1rem;
+  }
+  #ReserveMain .step .circle2 .check {
+    font-size: 1rem;
+  }
+  #ReserveMain .step .circle {
+    width: 7rem;
+    height: 7rem;
+  }
+  #ReserveMain .step .circle .num {
+    font-size: 2rem;
+  }
+  #ReserveMain .time-area .time button {
+    padding: 0.3rem 0.5rem;
+    width: 90%;
+    font-size: 0.8rem;
+  }
+  #Data .step {
+    height: 13rem;
+  }
+  #Data .step .arow1 {
+    margin: 0 1%;
+    font-size: 2rem;
+  }
+  #Data .step .arow2 {
+    margin: 0 1%;
+    font-size: 2rem;
+  }
+  #Data .step .circle1 .check {
+    font-size: 1rem;
+  }
+  #Data .step .circle2 .check {
+    font-size: 1rem;
+  }
+  #Data .step .circle {
+    width: 7rem;
+    height: 7rem;
+  }
+  #Data .step .circle .num {
+    font-size: 2rem;
+  }
+  #Data .form .form-div {
+    width: 80%;
+    height: 70rem;
+  }
+  #Data .form .form-div .data {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #Data .form .form-div .data .reverse {
+    width: 30rem;
+    height: 30rem;
+  }
+  #Data .form .form-div .data .reverse .reverse-y {
+    font-size: 2rem;
+  }
+  #Data .form .form-div .data .reverse .reverse-t {
+    font-size: 2rem;
+  }
+  #Data .form .form-div .data .reverse .service p {
+    font-size: 1.2rem;
+  }
+  #Data .form .form-div .data .reverse .price p {
+    font-size: 1.2rem;
+  }
+  #Data .form .form-div .data .profile {
+    width: 80%;
+    justify-content: start;
+  }
+  #Data .form .form-div .data .profile .profile-data {
+    margin: 2rem 0rem;
+  }
+  #Data .form .form-div .data .profile .check-button {
+    margin: 1rem 0rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  #Nav .bar {
+    top: 1rem;
+    right: 0rem;
+    position: absolute;
+  }
+  #Nav .bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin-right: 1rem;
+  }
+  #Nav .bar ul li {
+    padding: 1.3rem 0.3rem;
+    list-style-type: none;
+  }
+  #Nav .bar ul li a {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  #Nav button {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
+  #Home .about .aboutUs .service .service1 {
+    flex-direction: column;
+  }
+  #Home .about .aboutUs .service .service2 {
+    flex-direction: column;
+  }
+  #Home .about .opening-contact {
+    font-size: 1rem;
+  }
+  #Home .about .opening-contact .card {
+    min-width: 300px;
+  }
+  #Home .about .opening-contact .opening p {
+    font-size: 2rem;
+  }
+  #Home .about .opening-contact .opening table tbody tr th {
+    font-size: 1rem;
+  }
+  #Home .about .opening-contact .contact table tbody tr th {
+    font-size: 1rem;
+  }
+  #Home .reviews .reviews-div .review {
+    width: 19rem;
+    text-align: center;
+  }
+  #Home .gallery .big-img .pre:hover .p-pre {
+    font-size: 2rem;
+    top: 45%;
+  }
+  #Home .gallery .big-img .next:hover .p-next {
+    font-size: 2rem;
+    top: 45%;
+  }
+  #Home .gallery .big-img1 {
+    height: 30vh;
+  }
+  #Home .gallery .big-img2 {
+    height: 30vh;
+  }
+  #Home .gallery .big-img3 {
+    height: 30vh;
+  }
+  #Home .gallery .little-img .little1 {
+    width: 20%;
+    height: 10vh;
+    background-position: center;
+  }
+  #Home .gallery .little-img .little2 {
+    width: 20%;
+    height: 10vh;
+    background-position: center;
+  }
+  #Home .gallery .little-img .little3 {
+    width: 20%;
+    height: 10vh;
+    background-position: center;
+  }
+  #Search .Search-result .result .card {
+    height: auto;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  #Search .Search-result .result .card p {
+    font-size: 0.8rem;
+    margin-right: 0.2rem;
+  }
+  #Search .Search-result .result .card .time {
+    height: 2rem;
+    padding-left: 0.5rem;
+  }
+  #Search .Search-result .result .card .service {
+    width: 50%;
+    height: 2rem;
+    padding-left: 0.5rem;
+  }
+  #Service .step {
+    height: 10rem;
+  }
+  #Service .step .arow1 {
+    margin: 0 -0.5rem;
+    font-size: 1.5rem;
+  }
+  #Service .step .arow2 {
+    margin: 0 -0.5rem;
+    font-size: 1.5rem;
+  }
+  #Service .step .circle {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  #Service .step .circle .step-p {
+    font-size: 0.8rem;
+  }
+  #Service .step .circle .num {
+    font-size: 1.7rem;
+  }
+  #Service .service .card .p-hr-button .btn-div button {
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+  #Service .service .card .p-hr-button p {
+    font-size: 1.3rem;
+  }
+  #ReserveMain .step {
+    height: 10rem;
+  }
+  #ReserveMain .step .arow1 {
+    font-size: 1.5rem;
+  }
+  #ReserveMain .step .arow2 {
+    font-size: 1.5rem;
+  }
+  #ReserveMain .step .circle {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  #ReserveMain .step .circle .step-p {
+    font-size: 0.8rem;
+  }
+  #ReserveMain .step .circle .num {
+    font-size: 1.5rem;
+  }
+  #ReserveMain .step .circle .check {
+    font-size: 0.8rem;
+  }
+  #ReserveMain .return .return-div {
+    height: 1rem;
+  }
+  #ReserveMain .return .return-div button {
+    padding: 0.5rem 1.5rem;
+  }
+  #ReserveMain .time-area .year-month .year-month-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  #ReserveMain .time-area .year-month p {
+    font-size: 1rem;
+  }
+  #ReserveMain .time-area .date-div {
+    width: 90%;
+  }
+  #ReserveMain .time-area .date-div button {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
+  }
+  #ReserveMain .time-area .time-div button {
+    margin: 0rem 0.3rem 0.5rem 0rem;
+  }
+  #Data .step {
+    height: 10rem;
+  }
+  #Data .step .arow1 {
+    margin: 0 0rem;
+    font-size: 1.5rem;
+  }
+  #Data .step .arow2 {
+    margin: 0 0rem;
+    font-size: 1.5rem;
+  }
+  #Data .step .circle {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  #Data .step .circle .step-p {
+    font-size: 0.8rem;
+  }
+  #Data .step .circle .num {
+    font-size: 1.5rem;
+  }
+  #Data .step .circle .check {
+    font-size: 0.8rem;
+  }
+  #Data .return .return-div {
+    height: 1rem;
+  }
+  #Data .return .return-div button {
+    padding: 0.5rem 1.5rem;
+  }
+  #Data .form .form-div {
+    width: 80%;
+    height: 70rem;
+  }
+  #Data .form .form-div .form-title {
+    font-size: 1rem;
+  }
+  #Data .form .form-div .data {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #Data .form .form-div .data .reverse {
+    width: 30rem;
+    height: 30rem;
+  }
+  #Data .form .form-div .data .reverse .reverse-p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  #Data .form .form-div .data .reverse .reverse-y {
+    font-size: 2rem;
+  }
+  #Data .form .form-div .data .reverse .reverse-t {
+    font-size: 2rem;
+  }
+  #Data .form .form-div .data .reverse .service {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  #Data .form .form-div .data .reverse .service p {
+    font-size: 1.2rem;
+  }
+  #Data .form .form-div .data .reverse .price {
+    margin-top: 0.5rem;
+    flex-direction: column;
+  }
+  #Data .form .form-div .data .reverse .price p {
+    font-size: 1.2rem;
+  }
+  #Data .form .form-div .data .profile {
+    width: 80%;
+    justify-content: start;
+  }
+  #Data .form .form-div .data .profile .profile-data {
+    margin: 2rem 0rem;
+  }
+  #Data .form .form-div .data .profile .profile-data .name-gender .gender {
+    width: 44%;
+  }
+  #Data .form .form-div .data .profile .profile-data .name-gender .user-icon {
+    display: none;
+  }
+  #Data .form .form-div .data .profile .profile-data .phone-div .phone-icon {
+    display: none;
+  }
+  #Data .form .form-div .data .profile .profile-data .email-div .email-icon {
+    display: none;
+  }
+  #Data .form .form-div .data .profile .textarea-p p {
+    font-size: 0.9rem;
+  }
+  #Data .form .form-div .data .profile .check-button {
+    margin: 1rem 0rem;
+  }
+  #Data .form .form-div .data .profile .check-button .button-div {
+    margin-top: 1rem;
+  }
+  #Data .form .form-div .data .profile .check-button .button-div .button {
+    max-width: 100%;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
