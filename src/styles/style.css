@@ -388,7 +388,7 @@
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/wv0tbhe4dpmm23aryoop");
+  background-image: url("../../public/picture/per4.avif");
   background-size: cover;
   background-position: 55% 5%;
   margin-top: 2rem;
@@ -397,7 +397,7 @@
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/unhaqttdfluxqkbllv89");
+  background-image: url("../../public/picture/per5.jpg");
   background-size: cover;
   background-position: 55% 5%;
   margin-top: 2rem;
@@ -406,7 +406,7 @@
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/ypnvymeqsg8p7aetv2jr");
+  background-image: url("../../public/picture/per6.jpg");
   background-size: cover;
   background-position: 40% 0%;
   margin-top: 2rem;
@@ -488,20 +488,20 @@
 #Home .gallery .big-img1 {
   width: 90%;
   height: 100vh;
-  background-image: url("../../public/picture/spa1.jpg");
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/wv0tbhe4dpmm23aryoop");
   background-size: cover;
 }
 #Home .gallery .big-img2 {
   width: 90%;
   height: 100vh;
-  background-image: url("../../public/picture/spa2.jpg");
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/unhaqttdfluxqkbllv89");
   background-size: cover;
   background-position: center;
 }
 #Home .gallery .big-img3 {
   width: 90%;
   height: 100vh;
-  background-image: url("../../public/picture/spa3.jpg");
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/ypnvymeqsg8p7aetv2jr");
   background-size: cover;
   background-position: center;
 }
@@ -518,21 +518,21 @@
 #Home .gallery .little-img .little1 {
   width: 15%;
   height: 15vh;
-  background-image: url("../../public/picture/spa1.jpg");
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/wv0tbhe4dpmm23aryoop");
   background-size: cover;
   margin: 0rem 0.5rem;
 }
 #Home .gallery .little-img .little2 {
   width: 15%;
   height: 15vh;
-  background-image: url("../../public/picture/spa2.jpg");
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/unhaqttdfluxqkbllv89");
   background-size: cover;
   margin: 0rem 0.5rem;
 }
 #Home .gallery .little-img .little3 {
   width: 15%;
   height: 15vh;
-  background-image: url("../../public/picture/spa3.jpg");
+  background-image: url("https://res.cloudinary.com/dfpgefznw/image/upload/f_auto,q_auto/ypnvymeqsg8p7aetv2jr");
   background-size: cover;
   margin: 0rem 0.5rem;
 }
